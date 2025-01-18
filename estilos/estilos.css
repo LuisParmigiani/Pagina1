@@ -1,0 +1,77 @@
+/* Nav de arriba de todo */
+.nav {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* saca los estilos de los links de la nav */
+.nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav ul li {
+    margin-right: 20px;
+    padding-left: 120px;
+}
+
+.foto_principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2e2d8d;
+}
+.foto_principal img {
+    width: 70%;
+    height: auto;
+}
+
+.pro-mas-pop {
+    padding: 20px;
+}
+.pro-mas-pop h2 {
+    text-align: center;
+}
+
+.productos-destacados{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.productos-destacados .producto{
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    
+    bottom: 0;
+    width: 100%;
+}
+
+.redes-sociales ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.redes-sociales ul a{
+    color: white;
+    text-decoration: none;
+}
+
+.login-form{
+    min-height: 30vh; 
+    margin-top:2rem;
+}
