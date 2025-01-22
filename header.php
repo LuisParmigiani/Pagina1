@@ -14,8 +14,8 @@
             <li><a href="nosotros.php">Nosotros</a></li>
             <li><a href="servicios.php">Servicios</a></li>
             <li><a href="contacto.php">Contacto</a></li>
-            <li><a href="carrito.php">Carrito</a></li>
-            <li class = " <?php if($cod != "dueno")echo 'd-none';?>"><a href="agregar-ptoducto.php">Agregar producto</a></li>
+            <li class=" <?php if ($cod == 'dueno' )echo 'd-none'?>"><a href="carrito.php">Carrito</a></li>
+            <li class = " <?php if($cod != "dueno")echo 'd-none';?>"><a href="dueno_Local/prods_general.php">Agregar producto</a></li>
             <li class=" <?php if($cod != 0)echo 'd-none';?>"><a href="Usuarios/Login.php">Login</a></li>
         </ul>
     </div>
