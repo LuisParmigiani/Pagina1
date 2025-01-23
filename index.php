@@ -1,4 +1,5 @@
 <?php 
+    include 'conexion/function.php';    
     session_start();
     //session_unset();
     //session_destroy();
@@ -23,17 +24,34 @@
             include 'novedades.php';
         ?>
     </div>
-    <div class="container-fluid pro-mas-pop">
-        <h2>Productos destacados</h2>
-        <div class="productos-destacados">
-            <div class="producto">
-                <h3>Nombre del producto1</h3>
-                <img src="Fotos_productos/p+p_foto.png" alt="producto1">
-                <p>Descripcion del producto1</p>
-                <p>Precio del producto1</p>
-                <button>Agregar al carrito</button>
-            </div>
-        </div>
+    <div class="container-fluid pro-mas-pop text-center">
+        <h2>Productos destacados: </h2>
+        <?php
+            $query = "SELECT * FROM productos";
+            $resultado = consultaSQL($query);
+            if(mysqli_num_rows($resultado) > 0){
+                while($fila = mysqli_fetch_array($resultado)){
+                    $id = $fila['id'];
+                    $nombre = $fila['Nombre'];
+                    $descripcion = $fila['Descripcion'];
+                    $precio = $fila['Precio'];
+                    $foto = $fila['Foto'];
+                    $marca = $fila['Marca'];
+                    $categoria = $fila['Categoria'];
+                    $foto = "FOTO a futuro";
+                    ?>
+                    <div class="card m-2 d-inline-block" style="width: 18rem;">
+                        <img src="<?php echo $foto; ?>" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title"> <?php echo $nombre; ?></h5>
+                            <p class="card-text"><?php echo $precio; ?></p>
+                            <a href="" class="btn btn-primary">agregar al carrito</a>
+                        </div>
+                    </div>
+                    <?php
+                }
+            }
+        ?>
     </div>
     
     <footer>

@@ -1,5 +1,5 @@
 <?php 
-include '../conexion/fuction.php';
+include '../conexion/function.php';
 $nombre = $_POST['nombre'];
 $descripcion = $_POST['descripcion'];
 $precio = $_POST['precio'];
